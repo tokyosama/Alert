@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { provide } from 'vue'
 import { Urgent } from './Urgent'
-import  CreatVue  from './Components/Creat.vue'
+import CreatVue from './Components/Creat.vue'
 
 const instance = new Urgent()
 provide('instance', instance)
@@ -18,7 +18,7 @@ instance.Run()
     <div class="Urgent">
         <div class="map" ref="mapDom"></div>
         <div class="Tools">
-            <div class="item" v-for="i in tools" :key="i.id">
+            <div class="item" v-for="i in tools" :key="i.id" @click="instance.x()">
                 <img :src="i.icon" alt="">
             </div>
         </div>
