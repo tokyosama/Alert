@@ -7,7 +7,8 @@ const instance = new Urgent()
 provide('instance', instance)
 const {
     mapDom,
-    tools
+    tools,
+    addAlert
 
 } = instance.InitStates()
 instance.InitHooks()
@@ -22,7 +23,22 @@ instance.Run()
                 <img :src="i.icon" alt="">
             </div>
         </div>
-        <div class="Create"></div>
+        <div class="Create">
+            <el-button @click="addAlert = true">
+                click
+            </el-button>
+        </div>
+        <el-dialog v-model="addAlert" title="Tips" width="600px">
+            <template #footer>
+                <div class="dialog-footer">
+                    <el-button @click="addAlert = false">Cancel</el-button>
+                    <el-button type="primary" @click="addAlert = false">
+                        Confirm
+                    </el-button>
+                </div>
+
+            </template>
+        </el-dialog>
 
 
 
