@@ -30,10 +30,13 @@ class Urgent extends Actor {
         { id: 4, icon: subIcon, text: '缩小' },
     ])
 
+    public addAlert = ref(false)
+
     public InitStates() {
         return {
             mapDom: this.mapDom,
-            tools: this.tools
+            tools: this.tools,
+            addAlert: this.addAlert,
 
         }
     }
