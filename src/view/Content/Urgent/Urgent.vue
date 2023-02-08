@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { provide } from 'vue'
 import { Urgent } from './Urgent'
-import  CreatVue  from './Components/Creat.vue'
+import CreatVue from './Components/Creat.vue'
 
 const instance = new Urgent()
 provide('instance', instance)
@@ -22,14 +22,14 @@ instance.Run()
                 <img :src="i.icon" alt="">
             </div>
         </div>
-        <div class="Create"></div>
+        <div class="Create">
+            <CreatVue v-show="true"></CreatVue>
+        </div>
 
 
 
 
-        <!-- <transition>
-            <CreatVue v-show="false"></CreatVue>
-        </transition> -->
+
     </div>
 </template>
 

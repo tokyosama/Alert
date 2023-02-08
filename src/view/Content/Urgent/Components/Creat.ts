@@ -10,8 +10,11 @@ class Creat extends Actor {
 
     private parent: Urgent | null = null
 
+    public isShow=ref(false)
+
     public InitStates() {
         return {
+            isShow:this.isShow
 
         }
     }
@@ -32,6 +35,10 @@ class Creat extends Actor {
 
     public Destroy() {
 
+    }
+
+    public add(){
+        this.isShow.value=true
     }
 }
 

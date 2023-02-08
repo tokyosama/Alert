@@ -1,7 +1,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { Actor } from "@/libs/Actor"
 import { Creat } from './Components/Creat'
-import statusIcon from '@/assets/images/Together/task.png'
+import statusIcon from '@/assets/images/Together/sate.png'
 import searchIcon from '@/assets/images/Together/search.png'
 import addIcon from '@/assets/images/Together/add.png'
 import subIcon from '@/assets/images/Together/sub.png'
