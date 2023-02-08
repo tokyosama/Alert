@@ -1,5 +1,6 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { Actor } from "@/libs/Actor"
+import { MessageBox } from '@/libs/MessageBox'
 import { Creat } from './Components/Creat'
 import statusIcon from '@/assets/images/Together/sate.png'
 import searchIcon from '@/assets/images/Together/search.png'
@@ -29,10 +30,13 @@ class Urgent extends Actor {
         { id: 4, icon: subIcon, text: '缩小' },
     ])
 
+    public addAlert = ref(false)
+
     public InitStates() {
         return {
             mapDom: this.mapDom,
-            tools: this.tools
+            tools: this.tools,
+            addAlert: this.addAlert,
 
         }
     }
@@ -71,6 +75,10 @@ class Urgent extends Actor {
             })
             this.satellite.hide()
         }
+    }
+
+    public x() {
+        MessageBox.Confirm("是否保存当前预案", () => { })
     }
 
 
